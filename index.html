@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cokkie constent</title>
+    <!-- Bootstrap 4.1.1 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css">
+
+    <!-- cookiealert styles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Wruczek/Bootstrap-Cookie-Alert@gh-pages/cookiealert.css">
+</head>
+
+<body>
+    <script>
+        function elementFronHtml(html) {
+            const template = document.createElement("template");
+            template.innerHTML = html.trim();
+            return template.content.firstElementChild;
+        }
+        const myHtmlTemplate = elementFronHtml(`
+        <div class="alert text-center cookiealert" role="alert">
+            <b>Do you like cookies?</b> &#x1F36A; We use cookies to ensure you get the best experience on our website. <a href="https://cookiesandyou.com/" target="_blank">Learn more</a>
+
+            <button type="button" class="btn btn-primary btn-sm acceptcookies">
+                I agree
+            </button>
+        </div>
+    `)
+        document.body.appendChild(myHtmlTemplate)
+    </script>
+    <!-- cookie constent js  -->
+    <script src="cookie-constent.js"></script>
+</body>
+
+</html>
